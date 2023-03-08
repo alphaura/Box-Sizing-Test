@@ -1,5 +1,5 @@
 body {
-    width: 2000px;
+    width: 1800px;
 }
 
 .box1 {
@@ -11,7 +11,7 @@ body {
     border: 50px solid black;
 
     /* Using border-box allows me to easily play with the sizing and keeping the spacing better */
-    box-sizing: border-box;
+    box-sizing: content-box;
 
     /* Using margin: 0 auto; allows me to put the whole class in the middle of the page */
     margin: 0 auto;
@@ -29,7 +29,12 @@ body {
     width: 600px;
     font-weight: 900px;
     padding: 50px;
-    border: 10px solid black;
+    /* In order to make one side thicker than the other, I need to use each border side property */
+    border-top: 50px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+
     /* Using border-box allows me to easily play with the sizing and keeping the spacing better */
     box-sizing: border-box;
 
@@ -40,3 +45,26 @@ body {
     display: flex;
     justify-content: center; 
 }
+
+/* This one has worked slightly better with regards to spacing from the other content, mainly because I have written an [h2] inside
+   inside the [div] tag, and not just gave the [div] tag name. This is also creates two different scenarios when playing with the 
+   padding of the [div] and [h2] tags. */
+
+.box3 {
+    background-color: brown;
+    font-size: 50px;
+    font-style: italic;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+h2 {
+   border: 5px solid black;
+   box-sizing: border-box;
+   background-color: aliceblue;
+}
+
+
+
+
