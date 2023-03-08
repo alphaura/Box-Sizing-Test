@@ -1,0 +1,42 @@
+body {
+    width: 2000px;
+}
+
+.box1 {
+    background-color: aqua;
+    font-size: 150px;
+    width: 1000px;
+    font-weight: 900px;
+    padding: 50px;
+    border: 50px solid black;
+
+    /* Using border-box allows me to easily play with the sizing and keeping the spacing better */
+    box-sizing: border-box;
+
+    /* Using margin: 0 auto; allows me to put the whole class in the middle of the page */
+    margin: 0 auto;
+
+    /* This makes the content inside the box, center itself (or choose a side depending on the value used */
+    display: flex;
+    justify-content: center;
+}
+
+
+/* I want to make this box detach from box1 and have the upper border thicker than the others. */
+.box2 {
+    background-color: aqua;
+    font-size: 150px;
+    width: 600px;
+    font-weight: 900px;
+    padding: 50px;
+    border: 10px solid black;
+    /* Using border-box allows me to easily play with the sizing and keeping the spacing better */
+    box-sizing: border-box;
+
+    /* Using margin: 0 auto; allows me to put the whole class in the middle of the page */
+    margin: 0 auto;
+
+    /* This makes the content inside the box, center itself (or choose a side depending on the value used */
+    display: flex;
+    justify-content: center; 
+}
