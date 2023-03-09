@@ -1,5 +1,5 @@
 body {
-    width: 1800px;
+    max-width: 1800px;
 }
 
 .box1 {
@@ -38,8 +38,9 @@ body {
     /* Using border-box allows me to easily play with the sizing and keeping the spacing better */
     box-sizing: border-box;
 
-    /* Using margin: 0 auto; allows me to put the whole class in the middle of the page */
-    margin: 0 auto;
+    /* Using margin: 10px auto; allows me to put the whole class in the middle of the page...
+       the AUTO part is where it mostly puts it in the middle.*/
+    margin: 10px auto;
 
     /* This makes the content inside the box, center itself (or choose a side depending on the value used */
     display: flex;
@@ -84,5 +85,82 @@ body {
     margin: -110px 0 0 0;
 }
 
+    /* 
 
+   Display: block; <div>, <p>, or any element that has a block decleration on
+   Display: inline; <a>, <span> <em>, or any element that has a block decleration on
+   Display: inline-block; <input>, <select>, or any element that has a block decleration on
+
+    */
+
+.display{
+    font-size: 58px;
+    font-style: italic;
+    margin-top: 100px;
+    margin-left: 40px;
+    text-align: center;
+    background-color: brown;
+    padding: 10px;
+    color: aliceblue;
+    border: 2px dashed khaki;
+}
+
+/* The [p] tag is displayed as "block" by default which takes a whole line by itself. Turning it into inline, I made it possible for it
+   to join the other elements on one line and also restricts the width to stay with the content and not the width of the page. */
+p {
+    background-color: aqua;
+    font-size: 50px;
+    display: inline;
+}
+
+/* The [span] tag is displayed as "inline" by default which makes it possible for it to stay on the same line with other "inline" 
+   elements. However, when using [padding] to space the content, the background was seen to go over the other elements which might
+   not be something that we want. In this instance, the placeholder text, cannot be seen due to the overlapping of one of the [span]
+   elements. 
+   
+   Make display: none; on the [span] tag to see it.*/
+span {
+    background-color: aquamarine;
+    font-size: 50px;
+    padding: 50px;
+    display: ;
+}
+
+/* The [div] tag is displayed as a "block" by default which takes a whole line by itself. Turning it into inline-block, it gives the
+   element the best of both worlds. You can put it on the same line as other inline elements, however, when using the padding and
+   margin properties, they will not overlap over other elements. */
+div {
+    background-color: blanchedalmond;
+    font-size: 50px;
+    display: inline-block;
+    padding: 40px;
+}
+
+a {
+    font-size: 30px;
+    color: burlywood;
+    text-decoration: none;
+}
+
+a:hover {
+    color: brown;
+    background-color: blanchedalmond;
+}
+
+/* The [b] tag and [placeholder] property are both displayed as "inline-block" by default. I wanted them noth to have the background of the
+   [b] tag while being under eachother, therefore, I turned both of them into display "block". */
+
+b {
+    background-color: yellowgreen;
+    font-size: 50px;
+    display: block;
+}
+
+[placeholder="Yes type here! Type it now!!!"]{
+    font-size: 30px;
+    background-color:violet;
+    display: block;
+    margin-top: 10px;
+    
+}
 
